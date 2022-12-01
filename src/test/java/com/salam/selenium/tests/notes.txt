@@ -1,0 +1,3 @@
+
+
+ArrayList<Type of data here> nameOfArray = new ArrayList<type of data here>();
