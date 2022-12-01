@@ -37,7 +37,7 @@ public class TestMainClass {
         numberArray.add("eight");
         numberArray.add("nine"); //8
 
-        for (int i = 0; i < 9; i = i+2){
+        for (int i = 0; i < 9;  i++){
             System.out.println(numberArray.get(i));
         }
 

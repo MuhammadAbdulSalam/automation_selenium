@@ -5,3 +5,7 @@ Check and read about Assert
 
 (1,2,3,4,5,6,7,8,9,10)
 make a test to see every alternate element is odd or even.
+
+Read about
+while loop
+for-each loop
