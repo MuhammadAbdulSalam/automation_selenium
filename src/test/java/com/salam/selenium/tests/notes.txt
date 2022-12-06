@@ -3,4 +3,10 @@
 Create a data table usage example and create some tests
 for reference:
 https://www.baeldung.com/cucumber-data-tables
-https://www.tutorialspoint.com/cucumber/cucumber_data_tables.htm
+https://www.tutorialspoint.com/cucumber/cucumber_data_tables.html
+
+
+create a new branch.
+Make changes on branch
+Create a pull request
+Merge onto Main
