@@ -31,7 +31,6 @@ public class TestMainClass {
 
     }
 
-
     @Then("Enter Password {string} and {string}")
     public void enter_password_and(String password, String secondPassword) {
 
@@ -56,7 +55,6 @@ public class TestMainClass {
         }
 
     }
-
 
     @Then("validate success login")
     public void validate_success_login() {
