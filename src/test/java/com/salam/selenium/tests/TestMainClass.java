@@ -18,22 +18,27 @@ import java.util.List;
 @RunWith(JUnit4.class)
 public class TestMainClass {
 
+    //initialise your chrome driver here
     ChromeDriver chromeDriver= new ChromeDriver();
 
-    @Given("My browser is up and running and website is loaded")
+
+    @Test
     public void my_browser_is_up_and_running_and_website_is_loaded() {
+
+        // let the environment know what driver to use
+        // System.setProperty("NAME_OF_DRIVER", "LOCATION_OF_DRIVER")
         System.setProperty("webdriver.chrome.driver", "chromedriver");
+
+        // to get URL from element
         chromeDriver.get("https://amaninja-concept2.myshopify.com/password");
     }
 
-    @Then("Go to site Enter Username {string}")
-    public void go_to_site_enter_username(String string) {
 
-    }
 
-    @Then("Enter Password {string} and {string}")
+    @Test
     public void enter_password_and(String password, String secondPassword) {
 
+        //ArrayList<TYPE> nameOfArray = new ArrayList<TYPE>();
         ArrayList<String> passwordArray = new ArrayList<String>();
         passwordArray.add("asdasd");
         passwordArray.add("asdasd");
@@ -42,21 +47,38 @@ public class TestMainClass {
         passwordArray.add("asdasd");
         passwordArray.add("asdasd");
 
+        //for each item in object/array/collection loop
         for (String pass : passwordArray) {
-            WebElement passwordField = chromeDriver.findElement(By.id("password"));
-            passwordField.sendKeys(pass);
-            WebElement buttonEnter = chromeDriver.findElement(By.xpath("/html/body/div/div[2]/div[2]/form/button"));
-            buttonEnter.click();
-
-            String exp = ("https://amaninja-concept2.myshopify.com/");
-            String act = "https://amaninja-concept2.myshopify.com/";
-
-            Assert.assertNotEquals(exp, act);
         }
+
+        //for(int indexStart; condition; increment) loop
+        for(int i = 0; i < 10; i++){
+
+        }
+
+        //while(condition) loop
+//        while(true){
+//            System.out.println("print this line");
+//        }
+
+        //get element by ID is best way since xpath can change in future
+        WebElement passwordField = chromeDriver.findElement(By.id("password"));
+
+        // perform actions on web elements- send keys- types on the element
+        passwordField.sendKeys("pass");
+
+        WebElement buttonEnter = chromeDriver.findElement(By.xpath("/html/body/div/div[2]/div[2]/form/button"));
+        buttonEnter.click();
+
+        String exp = ("https://amaninja-concept2.myshopify.com/");
+        String act = "https://amaninja-concept2.myshopify.com/";
+
+        Assert.assertEquals("", "");
+        Assert.assertNotEquals(exp, act);
 
     }
 
-    @Then("validate success login")
+    @Test
     public void validate_success_login() {
         chromeDriver.quit();
     }

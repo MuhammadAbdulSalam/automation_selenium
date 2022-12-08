@@ -8,9 +8,9 @@
     <artifactId>salam</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
+    <!-- Any dependency needs to be between dependencies tags -->
     <dependencies>
-
+        <!-- Junit - Framework for Java testing -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -18,18 +18,21 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Selenium - Framework for web driver/ web elements -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.6.0</version>
         </dependency>
 
+        <!-- Cucumber java- To run gherkins test -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>7.9.0</version>
         </dependency>
 
+        <!-- Cucumber junit- To run gherkins test -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
