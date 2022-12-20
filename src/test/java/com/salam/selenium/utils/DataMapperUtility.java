@@ -11,14 +11,12 @@ public class DataMapperUtility {
      * This function will print my data table values in a single line each field
      */
     public void printMyDataTable(DataTable dataTable){
-
         for (int i = 0; i < dataTable.height(); i++){
             String firstName = dataTable.row(i).get(0);
             String secondName = dataTable.row(i).get(1);
             String email = dataTable.row(i).get(2);
             printMyValues(firstName, secondName, email);
         }
-
     }
 
     /**
