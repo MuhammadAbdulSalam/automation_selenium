@@ -11,21 +11,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.ArrayList;
 
-/**
- * Top Bar buttons -Home shop etc
- * Three tabs
- * Title text
- * back to our shop
- * quick links
- *
- *
- * Test static texts on these componenets
- * Test Navigation using top bar
- */
 public class CucumberTestsExample {
     DataMapperUtility dataMapperUtility = new DataMapperUtility();
 
-    WebDriver webDriver = new ChromeDriver();
+    protected WebDriver webDriver = new ChromeDriver();
 
     @Given("My browser is up and running and website is loaded {int}")
     public void my_browser_is_up_and_running_and_website_is_loaded(Integer int1) {
@@ -40,7 +29,6 @@ public class CucumberTestsExample {
     public void test_using_following_data(DataTable dataTable) {
 
         ArrayList<User> myUsersList =  dataMapperUtility.mapDataTableToArrayOfUsers(dataTable);
-
     }
 
     @Then("test users data on contact page")
